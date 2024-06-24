@@ -1,1 +1,2 @@
 php artisan db:seed --class=\\AbnCms\\RolesPermission\\DatabaseSeeder
+php artisan vendor:publish
