@@ -1,8 +1,10 @@
 <?php
 
 namespace Aman5537jains\AbnCms\Models;
+
+use Aman5537jains\AbnCms\Lib\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
+
 use File;
 
 class DynamicContent extends Model
@@ -24,7 +26,7 @@ class DynamicContent extends Model
     public function getDynamicContent()
     {
        return $this->belongsTo(\App\Models\DynamicContentType::class,"dynamic_content_type_id");
- 
+
     }
 
     public function getImageAttribute()
@@ -36,7 +38,7 @@ class DynamicContent extends Model
             return  asset("public/asset/images/no_image.png");
         }
     }
-    
+
 
 
 

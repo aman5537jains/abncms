@@ -1,8 +1,10 @@
 <?php
 
 namespace Aman5537jains\AbnCms\Models;
+
+use Aman5537jains\AbnCms\Lib\Sluggable;
 use Illuminate\Database\Eloquent\Model;
-use Cviebrock\EloquentSluggable\Sluggable;
+
 use File;
 
 class CmsManagement extends Model
