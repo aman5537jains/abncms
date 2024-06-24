@@ -32,9 +32,10 @@ Route::post('abn-cms/upload', function (Request $request){
 
 \Route::group(["middleware"=>["web"]],function(){
     Route::get('/{editor_page}', function (Request $request,$page){
-       
+
       return AbnCms::getActiveTheme()->setPageContent((new Editor())->getPage($page)->render())->render();
     });
+
     // Route::fallback(function () {
     //    $page =  trim(request()->getPathInfo(),"/");
     //    // dd($page);
