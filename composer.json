@@ -1,0 +1,35 @@
+{
+    "name": "abno/cms",
+    "description": "Abno Cms",
+    "type": "library",
+    "license": "MIT",
+    "keywords":["cms"],
+    "authors": [
+        {
+            "name": "aman",
+            "email": "ajain@abnosoftwares.co.ke"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Aman5537jains\\AbnCms\\": "/src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Aman5537jains\\AbnCms\\AbnCmsServiceProvider"
+            ]
+        }
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "https://asset-packagist.org"
+        }
+    ],
+    "require": {
+
+
+    }
+}
