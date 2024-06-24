@@ -34,6 +34,7 @@
         "abno/abnsettings":"dev-main",
         "abno/cmsadmintheme":"dev-main",
         "abno/rolespermission":"dev-main",
+        "cviebrock/eloquent-sluggable": "^8.0",
         "laravelcollective/html": "^6.4"
 
     }
