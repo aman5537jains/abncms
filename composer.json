@@ -33,7 +33,8 @@
         "abno/abncrud":"dev-main",
         "abno/abnsettings":"dev-main",
         "abno/cmsadmintheme":"dev-main",
-        "abno/rolespermission":"dev-main"
+        "abno/rolespermission":"dev-main",
+        "laravelcollective/html": "^6.4",
 
     }
 }
