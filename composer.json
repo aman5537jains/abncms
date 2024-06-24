@@ -29,7 +29,11 @@
         }
     ],
     "require": {
-
+        "abno/abn-cms-laravel-menu":"dev-main",
+        "abno/abncrud":"dev-main",
+        "abno/abnsettings":"dev-main",
+        "abno/cmsadmintheme":"dev-main",
+        "abno/rolespermission":"dev-main"
 
     }
 }
