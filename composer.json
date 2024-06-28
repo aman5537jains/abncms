@@ -36,6 +36,5 @@
         "abno/rolespermission":"dev-main",
         "abno/cmstheme":"dev-main",
         "laravelcollective/html": "^6.4"
-
     }
 }

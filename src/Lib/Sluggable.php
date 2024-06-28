@@ -11,7 +11,7 @@ trait Sluggable{
 
         // registering a callback to be executed upon the creation of an activity AR
         static::creating(function($model) {
-            $options = static::sluggable();
+            $options = $model->sluggable();
 
             // produce a slug based on the activity title
             $slug = \Str::slug($model->{$options["slug"]['source']});
@@ -24,7 +24,7 @@ trait Sluggable{
 
         });
         static::updating(function($model) {
-            $options = static::sluggable();
+            $options = $model->sluggable();
             if($options["slug"]["onUpdate"]){
                 // produce a slug based on the activity title
                 $slug = \Str::slug($model->{$options["slug"]['source']});

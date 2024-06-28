@@ -22,6 +22,12 @@ class AbnCms{
         Session::flash('alert-class', 'alert-abncms-'.$type);
     }
 
+    public static function upload($fileName,$path="cms")
+    {
+        $path = $fileName->store("public/".$path);
+        return  str_replace("public/","storage/",$path);
+    }
+
     public static function setDatabase(){
 
         if(request()->getHttpHost()=="abnocloud.com") {

@@ -2,4 +2,9 @@ php artisan migrate
 php artisan vendor:publish
 php artisan db:seed --class=\\AbnCms\\RolesPermission\\DatabaseSeeder
 php artisan storage:link
+add function User Model File in app/model/User.php
+
+function roles(){
+    return $this->hasMany(\AbnCms\RolesPermission\Models\UserRole::class);
+}
 
