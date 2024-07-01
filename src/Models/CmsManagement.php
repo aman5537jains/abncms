@@ -6,12 +6,25 @@ use Aman5537jains\AbnCms\Lib\Sluggable;
 use Illuminate\Database\Eloquent\Model;
 
 use File;
+use RalphJSmit\Laravel\SEO\Support\HasSEO;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
 
 class CmsManagement extends Model
 {
     use Sluggable;
 
+    use HasSEO;
 
+    public function getDynamicSEOData(): SEOData
+    {
+        $pathToFeaturedImageRelativeToPublicPath = "";// ..;
+
+        // Override only the properties you want:
+        return new SEOData(
+            title: $this->title,
+            description: \Str::words($this->description,10) //will show first 10 words$this->description
+        );
+    }
 
     public function sluggable(): array
     {

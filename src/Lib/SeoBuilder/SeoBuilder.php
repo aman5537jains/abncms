@@ -2,6 +2,9 @@
 
 namespace Aman5537jains\AbnCms\Lib\SeoBuilder;
 
+use RalphJSmit\Laravel\SEO\SchemaCollection;
+use RalphJSmit\Laravel\SEO\Support\SEOData;
+
 class SeoBuilder{
     public $meta =[];
     function setTitle($title){
@@ -23,13 +26,21 @@ class SeoBuilder{
     function getDescription(){
 
     }
-    function setMeta(){
-
+    function setMeta($key,$value,$rendered=''){
+        $this->meta[$key]=["value"=>$value,"rendered"=>$rendered];
     }
     function getMeta(){
         return '';
     }
     function render(){
+
+        return seo(new SEOData(
+            title: isset($this->meta["title"])?$this->meta["title"]["value"]:null,
+            description: isset($this->meta["description"])?$this->meta["description"]["value"]:null,
+            image: isset($this->meta["image"])?$this->meta["image"]["value"]:null,
+            author: isset($this->meta["author"])?$this->meta["author"]["value"]:null,
+            schema: SchemaCollection::make()->addArticle(),
+        ));
         $seos = '';
 
         foreach($this->meta as $k=>$value){

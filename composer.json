@@ -30,11 +30,13 @@
     ],
     "require": {
         "abno/abn-cms-laravel-menu":"dev-main",
+        "abno/abn-dynamic-content":"dev-main",
         "abno/abncrud":"dev-main",
         "abno/abnsettings":"dev-main",
         "abno/cmsadmintheme":"dev-main",
         "abno/rolespermission":"dev-main",
         "abno/cmstheme":"dev-main",
-        "laravelcollective/html": "^6.4"
+        "laravelcollective/html": "^6.4",
+        "ralphjsmit/laravel-seo": "^1.6"
     }
 }

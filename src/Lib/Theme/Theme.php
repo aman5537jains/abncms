@@ -90,7 +90,7 @@ class Theme{
         if(request("editor_page","")){
 
             $this->setPageContent((new Editor())->getPage(request("editor_page",""))->render());
-           
+
             return $this;
         }
         return  $this->setPageContent("");
@@ -130,16 +130,16 @@ class Theme{
     public function loadStylesheets(){
         $links='';
         $this->addStylesheets([
-                (new StylesheetLoader(".alert-abncms{ padding:20px;color:white;  
+                (new StylesheetLoader(".alert-abncms{ padding:20px;color:white;
                     position: fixed;
-                    
+
                     top: 74px;
                     z-index: 9999;
                     min-width: 304px;
                     transition: opacity 0.5s ease;
                     right: 16px;} .hidden {
                         opacity: 0;
-                    } .alert-abncms-info{ background: #04AA6D} .alert-abncms-danger{ background:#f44336} 
+                    } .alert-abncms-info{ background: #04AA6D} .alert-abncms-danger{ background:#f44336}
                     .closebtn {
                         margin-left: 15px;
                         color: white;
@@ -150,7 +150,7 @@ class Theme{
                         cursor: pointer;
                         transition: 0.3s;
                       }
-                      
+
                       .closebtn:hover {
                         color: black;
                       }
