@@ -36,7 +36,6 @@
         "abno/cmsadmintheme":"dev-main",
         "abno/rolespermission":"dev-main",
         "abno/cmstheme":"dev-main",
-        "laravelcollective/html": "^6.4",
         "ralphjsmit/laravel-seo": "^1.6"
     }
 }

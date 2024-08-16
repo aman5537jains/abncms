@@ -9,7 +9,9 @@ use Aman5537jains\AbnCms\Lib\AbnCms;
 use Aman5537jains\AbnCmsCRUD\CrudService;
 use Illuminate\Http\Request;
 use Aman5537jains\AbnCms\Editor\Editor;
-
+Route::group(['prefix' => 'laravel-filemanager', 'middleware' => ['web', 'auth']], function () {
+    \UniSharp\LaravelFilemanager\Lfm::routes();
+});
 Route::post('abn-cms/upload', function (Request $request){
     return PageBuilder::upload($request);
 });
@@ -31,10 +33,10 @@ Route::post('abn-cms/upload', function (Request $request){
 });
 
 \Route::group(["middleware"=>["web"]],function(){
-    Route::get('/{editor_page}', function (Request $request,$page){
+    // Route::get('/{editor_page}', function (Request $request,$page){
 
-      return AbnCms::getActiveTheme()->setPageContent((new Editor())->getPage($page)->render())->render();
-    });
+    //   return AbnCms::getActiveTheme()->setPageContent((new Editor())->getPage($page)->render())->render();
+    // });
 
     // Route::fallback(function () {
     //    $page =  trim(request()->getPathInfo(),"/");
